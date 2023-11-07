@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Household Carbon Footprint Calculator</title>
+    <!-- Include the Tailwind CSS stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://i0.wp.com/blog.rrc.co.uk/wp-content/uploads/2019/08/Carbon-Footprint-blog-post.jpg?w=2000');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+        }
+        .navbar {
+            background-color: rgba(6, 95, 70, 0.7); 
+            border-bottom: none;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green fixed-top">
+        <br>
+        <div class="container mx-auto">
+            <a class="navbar-brand" href="#">Carbon Footprinting</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Calculator
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="carbonfootprinter.html">Household Footprint</a>
+                            <a class="dropdown-item" href="vehicle.html">vehicle Footprint</a>
+                            
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br><br>
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg" style="opacity: .7;">
+            <img id="ctl05_imgPic" src="https://calculator.carbonfootprint.com/house.jpg?1" alt="Calculate the carbon footprint for your home">
+            <h1 class="text-4xl font-bold mb-8 text-center">Calculate Your Household Carbon Footprint</h1>
+            <form id="carbon-form">
+                <div class="mb-6">
+                    <label for="electricity" class="text-xl text-gray-700 font-semibold mb-2">Electricity Usage (units/year):</label>
+                    <input type="number" id="electricity" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+                </div>
+
+                <div class="mb-6">
+                    <label for="gas" class="text-xl text-gray-700 font-semibold mb-2">LPG Gas Usage (cylinders/year):</label>
+                    <input type="number" id="gas" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+                </div>
+
+                <div class="mb-6">
+                    <label for="water" class="text-xl text-gray-700 font-semibold mb-2">Water Usage (liters/day):</label>
+                    <input type="number" id="water" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+                </div>
+
+                <div class="mb-6">
+                    <label for="waste" class="text-xl text-gray-700 font-semibold mb-2">Waste Production (kilograms/day):</label>
+                    <input type="number" id="waste" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+                </div>
+
+                <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 w-full">Calculate</button>
+            </form>
+            <div id="result" class="hidden mt-8">
+                <h2 class="text-3xl font-semibold">Your Annual Indian Household Carbon Footprint:</h2>
+                <p id="carbon-result" class="text-xl"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <canvas id="carbon-chart" width="400" height="200"></canvas>
+    
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Carbon Footprint Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .form-select, .form-control {
+            margin: 10px 0;
+        }
+
+        .btn-primary {
+            background-color: #27ae60;
+            border: none;
+            border-radius: 4px;
+            height: 2rem;
+            width: 6.5rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #218c54;
+        }
+
+        h1 {
+            background-color: #27ae60;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Style the header */
+        h2 {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Style the car image */
+        .car-image {
+            max-width: 100%;
+            
+        }
+
+        /* Add more CSS styles as needed */
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        span p{
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: green;
+            display: inline-block;
+            position: relative;
+            left: 1em;
+            bottom:1em;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculate Your Vehicle's Carbon Footprint</h1>
+    <div class="container">
+        <img id="ctl05_imgPic" src="https://calculator.carbonfootprint.com/car.jpg?1" alt="Calculate the carbon footprint for your cars" style="width: 3rem;">
+        <span>
+            <p>	
+                Car carbon footprint calculator</p>
+        </span>
+        <form id="carbonFootprintCalculator">
+            <label for="vehicleMake">Select Vehicle Make (Brand):</label>
+            <select name="ctl05$ddlCarMake" onchange="javascript:setTimeout('__doPostBack(\'ctl05$ddlCarMake\',\'\')', 0)" id="ctl05_ddlCarMake" class="dropbox">
+                <option selected="selected" value=""> - select manufacturer - </option>
+                <option value="Ford India Pvt. Ltd.">Ford India Pvt. Ltd.</option>
+                <option value="Honda Cars India Ltd.">Honda Cars India Ltd.</option>
+                <option value="Hyundai Motor India Ltd.">Hyundai Motor India Ltd.</option>
+                <option value="Mahindra &amp; Mahindra Ltd.">Mahindra &amp; Mahindra Ltd.</option>
+                <option value="Maruti Suzuki India Ltd.">Maruti Suzuki India Ltd.</option>
+                <option value="Nissan Motor India Pvt. Ltd.">Nissan Motor India Pvt. Ltd.</option>
+                <option value="Renault India Pvt. Ltd.">Renault India Pvt. Ltd.</option>
+                <option value="Skoda Auto Volkswagen India Pvt. Ltd.">Skoda Auto Volkswagen India Pvt. Ltd.</option>
+                <option value="Tata Motors Ltd.">Tata Motors Ltd.</option>
+                <option value="Toyota Kirloskar Motor Pvt. Ltd.">Toyota Kirloskar Motor Pvt. Ltd.</option>
+            
+            </select><br>
+
+            <label for="vehicleModel">Select Vehicle Model:</label>
+            <select id="vehicleModel" required class="form-select">
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <!-- Add more vehicle models here -->
+            </select><br>
+
+            <label for="vehicleType">Select Your Vehicle Type:</label>
+            <select id="vehicleType" required class="form-select">
+                <option value="gasoline">Gasoline</option>
+                <option value="diesel">Diesel</option>
+                <option value="electric">Electric</option>
+                <option value="petrol">Petrol</option>
+                <!-- Add more vehicle types here -->
+            </select><br>
+
+            <label for="mileage">Mileage (Miles Driven):</label>
+            <input type="number" id="mileage" required class="form-control" placeholder="Enter mileage"><br>
+
+            <!-- New input field for fuel capacity -->
+            <label for="fuelCapacity">Fuel Capacity (liters):</label>
+            <input type="number" id="fuelCapacity" required class="form-control" placeholder="Enter fuel capacity"><br>
+
+            <button type="button" onclick="calculateCarbonFootprint()" class="btn btn-primary">Calculate</button>
+
+            <p class="result" id="result"></p>
+        </form>
+    </div>
+
+    <h2>About the Carbon Footprint Calculator</h2>
+    <p>This calculator helps you estimate the carbon emissions of your vehicle based on its make, model, type, fuel efficiency, mileage, and fuel capacity. It provides an approximation of the environmental impact of your vehicle's operations.</p>
+
+    <h2>Why Calculate Your Carbon Footprint?</h2>
+    <p>Understanding your vehicle's carbon footprint can help you make more eco-friendly choices, such as using more fuel-efficient vehicles or driving less. It's an essential step towards reducing your impact on the environment.</p>
+
+    <h2>Instructions:</h2>
+    <ul>
+        <li>Select your vehicle's make, model, and type from the dropdowns.</li>
+        <li>Enter the number of miles driven and your vehicle's fuel capacity.</li>
+        <li>Click the "Calculate" button to see the estimated carbon footprint.</li>
+    </ul>
+
+    <div class="container">
+        <img src="https://th.bing.com/th/id/OIP.PueCU2wvqmc-rMAoa36qcAHaEP?pid=ImgDet&rs=1" alt="Car Image" class="car-image">
+    </div>
+
+    <script>
+        const defaultValues = {
+            gasoline: { mileage: 25, carbonIntensity: 2.31 },
+            diesel: { mileage: 30, carbonIntensity: 2.68 },
+            electric: { mileage: 3, carbonIntensity: 0 },
+            petrol: { mileage: 28, carbonIntensity: 2.5 }, // Adding petrol type with some default values
+        };
+    
+        function calculateCarbonFootprint() {
+            const vehicleMake = document.getElementById("ctl05_ddlCarMake").value; // Get the selected vehicle make
+            const vehicleModel = document.getElementById("vehicleModel").value;
+            const vehicleType = document.getElementById("vehicleType").value;
+            const distanceDriven = parseFloat(document.getElementById("mileage").value);
+            const fuelCapacity = parseFloat(document.getElementById("fuelCapacity").value);
+    
+            const defaultValuesForType = defaultValues[vehicleType];
+    
+            if (!defaultValuesForType || !vehicleMake || !vehicleModel) {
+                document.getElementById("result").textContent = "Please select a valid vehicle make, model, and type.";
+                return;
+            }
+    
+            const fuelCarbonIntensity = defaultValuesForType.carbonIntensity;
+    
+            if (!isNaN(fuelCapacity) && !isNaN(distanceDriven)) {
+                const carbonFootprint = (fuelCapacity / 1000) * distanceDriven * fuelCarbonIntensity;
+                document.getElementById("result").textContent = `Your ${vehicleMake} ${vehicleModel} (${vehicleType}) has driven a total of ${distanceDriven} miles, resulting in an approximate carbon footprint of ${carbonFootprint.toFixed(2)} kg of CO2 emissions.`;
+            } else {
+                document.getElementById("result").textContent = "Please enter valid numbers for fuel capacity and distance driven.";
+            }
+        }
+    </script>
+    
+    
+    
+</body>
+</html>

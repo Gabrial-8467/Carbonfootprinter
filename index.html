@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprinting</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Tailwind CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://i0.wp.com/blog.rrc.co.uk/wp-content/uploads/2019/08/Carbon-Footprint-blog-post.jpg?w=2000');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+        }
+        .navbar {
+            background-color: rgba(6, 95, 70, 0.7); /* Transparent green navbar background */
+            border-bottom: none; /* Remove the border */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-fixed bg-center bg-cover" style="background-image: url('https://th.bing.com/th/id/R.22fb94684f0631c595ecf1752902be1c?rik=8bNL%2f1Aaek4gNg&riu=http%3a%2f%2fgeography-revision.co.uk%2fwp-content%2fuploads%2f2019%2f05%2fEnvironmental-impacts-of-economic-development_1.jpg&ehk=LsVWVYTNh89Dzq%2bOI080I%2fa6KFPQ7%2fj8wDqrgvuvOOo%3d&risl=&pid=ImgRaw&r=0')">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green fixed-top">
+        <div class="container mx-auto">
+            <a class="navbar-brand" href="#">Carbon Footprinting</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Calculator
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="carbonfootprinter.html">Household Footprint</a>
+                            <a class="dropdown-item" href="vehicle.html">vehicle Footprint</a>
+                            
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container mx-auto mt-20">
+        <div class="bg-green-700 bg-opacity-70 text-white p-6 md:p-12 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Calculate Your Carbon Footprint</h1>
+            <p class="text-lg md:text-2xl mb-8">Measure your environmental impact and learn how to reduce it.</p>
+            <a href="carbonfootprinter.html" class="bg-white text-green-700 hover:bg-green-800 hover:text-blue py-3 px-6 text-lg md:text-xl font-bold rounded-full transition duration-300">Get Started</a>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 mt-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 bg-opacity-70">
+            <a href="environmental.html" class="text-black">
+                <div class="p-4 feature-card bg-white shadow-md rounded-lg hover:shadow-lg transition duration-300">
+                    <img src="https://www.nortonrosefulbright.com/-/media/images/nrf/hero/energy-environment-climate-change-renewable-pollution-nuclear-windmill.jpg?la=en-au&revision=&hash=CA6434F34B847D359C1E8CEB3CFF4F9CAC687B79" alt="Environmental Impact" class="mb-4" style="height: 15rem;"><br>
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Environmental Impact</h2>
+                    <p class="text-sm md:text-base">Calculate your carbon footprint and learn about your environmental impact.</p>
+                </div>
+            </a>
+            <a href="Globalimpact.html" class="text-black">
+                <div class="p-4 feature-card bg-white shadow-md rounded-lg hover:shadow-lg transition duration-300">
+                    <img src="https://minutes.co/wp-content/uploads/2019/08/global-impact-1024x683.jpg" alt="Global Impact" class="mb-4"><br>
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Global Impact</h2>
+                    <p class="text-sm md:text-base">Understand the global impact of carbon emissions and how to reduce it.</p>
+                </div>
+            </a>
+            <a href="sustainabilitytips.html" class="text-black">
+                <div class="p-4 feature-card bg-white shadow-md rounded-lg hover:shadow-lg transition duration-300">
+                    <img src="https://miro.medium.com/max/1138/1*K58BpuzZFcKzmK3feXj72w.jpeg" alt="Sustainability Tips" class="mb-4" style="height: 15rem; width: 30rem;"><br>
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Sustainability Tips</h2>
+                    <p class="text-sm md:text-base">Discover sustainability tips to reduce your carbon footprint.</p>
+                </div>
+            </a>
+            <a href="recycling.html" class="text-black">
+                <div class="p-4 feature-card bg-white shadow-md rounded-lg hover:shadow-lg transition duration-300">
+                    <img src="https://franklincountyrecycling.files.wordpress.com/2012/04/image2.jpg" alt="Recycling" class="mb-4" style="height: 19rem;">
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Recycling</h2>
+                    <p class="text-sm md:text-base">Learn about the importance of recycling and how it affects your carbon footprint.</p>
+                </div>
+            </a>
+            <a href="renewable.html" class="text-black">
+                <div class="p-4 feature-card bg-white shadow-md rounded-lg hover:shadow-lg transition duration-300">
+                    <img src="https://assets.taraenergy.com/wp-content/uploads/2021/02/renewable-energy-technology-defined-solar-panels.jpg" alt="Renewable Energy" class="mb-4">
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Renewable Energy</h2>
+                    <p class="text-sm md:text-base">Discover how renewable energy sources can help reduce your carbon footprint. Switching to renewable energy sources such as wind, solar, and hydropower can significantly reduce your carbon footprint.</p>
+                </div>
+            </a>
+            <a href="eco-transport.html" class="text-black">
+                <div class="p-4 feature-card bg-white shadow-md rounded-lg hover:shadow-lg transition duration-300">
+                    <img src="https://i1.wp.com/www.intelligentliving.co/wp-content/uploads/2020/04/transport-that-folds93.jpg?resize=1024%2C683&ssl=1" alt="Eco-Friendly Transportation" class="mb-4">
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Eco-Friendly Transportation</h2>
+                    <p class="text-sm md:text-base">Explore eco-friendly transportation options for a greener lifestyle. Consider using bicycles for short trips, electric scooters for urban commuting, and public transportation systems to reduce your carbon footprint.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+<br><br><br>
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white py-6 sm:py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-xs sm:text-sm">&copy; 2023 Carbon Footprinting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JavaScript and jQuery links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
